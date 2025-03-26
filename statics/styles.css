@@ -1,0 +1,331 @@
+* {
+ font-family: "Lexend", serif;
+ font-optical-sizing: auto;
+ font-style: normal;
+ padding: 0;
+ margin: 0;
+
+}
+
+body {
+ background: #000;
+}
+
+#container {
+ display: flex;
+ height: 100vh;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+}
+
+h1 {
+ color: #fff;
+}
+
+@media (max-width: 575px) {
+
+ #back {
+  display: none;
+ }
+
+ #search-send {
+  width: 75%;
+ }
+
+ .movie-card {
+  height: 180px;
+  width: 120px;
+ }
+
+ .photo-movie {
+  width: 90%;
+  height: 110px;
+ }
+}
+
+/* Móviles grandes (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+ #name {
+  max-height: 50px;
+ }
+
+ #back {
+  display: none;
+ }
+
+ #search-send {
+  width: 80%;
+ }
+
+ .movie-card {
+  height: 180px;
+  width: 120px;
+ }
+
+ .photo-movie {
+  width: 90%;
+  height: 110px;
+ }
+}
+
+/* Tablets (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+ #name {
+  max-height: 50px;
+ }
+
+ #search-send {
+  width: 80%;
+ }
+
+ .movie-card {
+  height: 180px;
+  width: 120px;
+ }
+
+ .photo-movie {
+  width: 90%;
+  height: 110px;
+ }
+}
+
+/* Laptops pequeñas (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+ #name {
+  max-height: 50px;
+ }
+
+ #search-send {
+  width: 40%;
+ }
+
+ .movie-card {
+  height: 220px;
+  width: 150px;
+ }
+
+ .photo-movie {
+  width: 90%;
+  height: 110px;
+ }
+  #info{
+    position: absolute;
+ bottom: 10px;
+  }
+}
+
+/* Pantallas grandes (1200px en adelante) */
+@media (min-width: 1200px) {
+ #search-send {
+  width: 60%;
+ }
+
+ .movie-card {
+  height: 270px;
+  width: 130px;
+ }
+
+ .photo-movie {
+  width: 90%;
+  height: 120px;
+ }
+
+
+}
+
+#search-send {
+ display: flex;
+ flex-direction: column;
+ padding: 20px;
+ gap: 10px;
+ height: auto;
+ border-radius: 4px;
+ border: 2px dotted #fff;
+ margin-top: -50px;
+}
+
+#search-send:hover {
+ background: rgba(247, 0, 0, 0.14);
+ border: 2px dotted #f2f2f2;
+
+}
+
+
+#search-send:hover {
+
+ transition: .9s;
+}
+
+form {
+
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+}
+
+.search-input {
+ border: none;
+ border-radius: 4px;
+ font-size: 18px;
+}
+
+.search-input {
+ display: flex;
+ outline: none;
+ padding: 6px;
+ text-align: center;
+ border: 2px solid transparent;
+}
+
+.btn-search {
+ padding: 6px;
+ text-align: center;
+ cursor: pointer;
+ border: 2px solid transparent;
+ border-radius: 4px;
+ width: 50%;
+ background: rgba(206, 0, 0, 0.63);
+ color: #fff;
+}
+
+
+.search-input:hover {
+ border: 2px solid gray;
+ transition: .6s;
+}
+
+.btn-search:hover {
+ border: 2px solid #fff;
+ transition: .6s;
+}
+
+
+h3,
+p {
+ color: #fff;
+}
+
+#father-results {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ gap: 20px;
+ padding: 20px;
+
+ margin: 0 auto;
+ width: 90%;
+
+}
+
+
+.movie-card {
+
+ background: rgba(33, 33, 33, 0.55);
+ border-radius: 8px;
+ padding: 15px;
+ text-align: center;
+
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ position: relative;
+
+}
+
+.movie-card:hover,
+#back:hover {
+ transform: scale(1.05);
+ z-index: 1;
+ transition: .6s;
+}
+
+#name {
+
+ border-radius: 4px;
+ margin-bottom: 10px;
+ overflow: hidden;
+ text-overflow: ellipsis;
+}
+
+.photo-movie {
+ font-size: 12px;
+ border-radius: 5px;
+ margin-bottom: 10px;
+}
+
+#info {
+ background: rgba(255, 0, 0, 0.06);
+ padding: 8px;
+ border-radius: 4px;
+ 
+ font-size: 12px;
+ width: 80%;
+}
+
+img {
+ color: red;
+ font-weight: bold;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+#back {
+ position: absolute;
+ left: 13px;
+ top: 20px;
+ height: 50px;
+ width: 50px;
+}
+
+#back:hover {
+ cursor: pointer;
+ transition: .9s;
+}
+
+.showinfo {
+ width: 15px;
+ height: 15px;
+ position: absolute;
+ right: 5px;
+ bottom: 3px;
+}
+
+#overview {
+ display: none;
+ position: fixed;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ /* Centrado perfecto */
+ background: rgba(0, 0, 0, 0.9);
+ color: white;
+ padding: 30px;
+ border-radius: 8px;
+ width: 80%;
+ max-width: 600px;
+ max-height: 80vh;
+ overflow-y: auto;
+ z-index: 1000;
+ box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+
+}
+
+.overview2 {
+ display: none;
+}
+
+
+#close {
+ position: absolute;
+ right: 10px;
+ top: 5px;
+ background: transparent;
+ color: gray;
+ border: none;
+}
+
+#close:hover {
+ color: red;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <title>Found Results</title>
+ <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+ <img id="back" src="/back.png">
+
+ <div id="father-results">
+  <div id="overview">
+   <button id="close">CLOSE</button>
+
+  </div>
+  <% if (movies.results && movies.results.length> 0) { %>
+   <% movies.results.forEach(movie=> { %>
+    <div class="movie-card">
+     <div id="name">
+      <h3>
+       <%= movie.title %>
+      </h3>
+     </div>
+
+     <img class="photo-movie" src="https://image.tmdb.org/t/p/w500<%= movie.poster_path %>" alt="image not found">
+
+     <div id="info">
+      <p><strong>Release date:</strong>
+       <%= movie.release_date %>
+      </p>
+      <p><strong>Rating:</strong>
+       <%= movie.vote_average %>
+      </p>
+      <img class="showinfo" src="/showinfo.png">
+      <div class="overview2">
+       <%= movie.overview %>
+      </div>
+     </div>
+    </div>
+    <% }); %>
+     <% } else { %>
+      <p>No movies found. Try another search!</p>
+      <% } %>
+ </div>
+
+
+ <script>
+  const back = document.getElementById('back');
+  back.addEventListener("click", function (e) {
+   window.history.back();
+  });
+
+  // Mover el evento close fuera del bucle showinfo
+  document.addEventListener('click', function (e) {
+   if (e.target.id === 'close') {
+    document.getElementById('overview').style.display = 'none';
+   }
+  });
+
+  document.querySelectorAll('.showinfo').forEach(button => {
+   button.addEventListener('click', function (e) {
+    e.stopPropagation();
+    const ov1 = this.closest('.movie-card').querySelector('.overview2');
+    const ovx = document.getElementById('overview');
+
+    lenght_overview = ov1.textContent.length;
+    console.log(lenght_overview);
+    ovx.innerHTML = `
+                    <button id="close">CLOSE</button>
+                    <div class="overview-content">${ov1.textContent || 'Overview not found for this movie'}</div>
+                `;
+
+    ovx.style.display = 'block';
+   });
+  });
+ </script>
+</body>
+
+</html>
