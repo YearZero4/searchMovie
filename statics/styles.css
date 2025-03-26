@@ -59,7 +59,7 @@ h1 {
  }
 
  .movie-card {
-  height: 180px;
+  height: 220px;
   width: 120px;
  }
 
@@ -80,7 +80,7 @@ h1 {
  }
 
  .movie-card {
-  height: 180px;
+  height: 250px;
   width: 120px;
  }
 
@@ -255,11 +255,12 @@ p {
 
 #info {
  background: rgba(255, 0, 0, 0.06);
- padding: 8px;
+ padding: 10px 15px 10px 15px;
  border-radius: 4px;
  
  font-size: 12px;
  width: 80%;
+  position: relative;
 }
 
 img {
