@@ -10,7 +10,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 async function search(name_movie) {
  try {
-  const url = `https://api.themoviedb.org/3/search/movie?query=${name_movie}&api_key=d8d6d57d6b54c98bd22d21d0130bd233`;
+  const url = `https://api.themoviedb.org/3/search/movie?query=${name_movie}&api_key=fe21738233ba5e83ceb90796e5f9fb2c`;
   const response = await axios.get(url);
   return response.data;
  } catch (error) {
