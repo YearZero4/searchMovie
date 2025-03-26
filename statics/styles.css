@@ -140,9 +140,10 @@ h1 {
  padding: 20px;
  gap: 10px;
  height: auto;
- border-radius: 4px;
  margin-top: -50px;
+ border-bottom:2px dotted #fff;
 }
+
 
 
 form {
