@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
  <title>Found Results</title>
  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
@@ -20,9 +19,9 @@
    <% movies.results.forEach(movie=> { %>
     <div class="movie-card">
      <div id="name">
-      <h3>
+      <h4>
        <%= movie.title %>
-      </h3>
+      </h4>
      </div>
 
      <img class="photo-movie" src="https://image.tmdb.org/t/p/w500<%= movie.poster_path %>" alt="image not found">
