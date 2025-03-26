@@ -297,6 +297,7 @@ img {
 
 #close:hover {
   color: red;
+  cursor:pointer;
 }
 
 .mov-img {
