@@ -141,21 +141,9 @@ h1 {
  gap: 10px;
  height: auto;
  border-radius: 4px;
- border: 2px dotted #fff;
  margin-top: -50px;
 }
 
-#search-send:hover {
- background: rgba(247, 0, 0, 0.14);
- border: 2px dotted #f2f2f2;
-
-}
-
-
-#search-send:hover {
-
- transition: .9s;
-}
 
 form {
 
@@ -328,4 +316,10 @@ img {
 
 #close:hover {
  color: red;
+}
+
+
+.mov-img{
+  height:90px;
+  width:90px;
 }
