@@ -264,6 +264,10 @@ img {
   bottom: 3px;
 }
 
+.showinfo:hover{
+  cursor: pointer;
+}
+
 #overview {
   display: none;
   position: fixed;
